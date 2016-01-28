@@ -1,0 +1,19 @@
+.donate-section--small{
+  padding: 0 1em;
+  h3{
+    padding-top: 1em;
+    color: #fff;
+  }
+  .button--donate{
+    box-shadow: none;
+    outline: 2px solid #fff;
+  }
+  .form--donate{
+    overflow: visible;
+  }
+  input[type="number"].form--donate__input{
+    margin-bottom: 0;
+    border: 2px solid #fff;
+  }
+
+}

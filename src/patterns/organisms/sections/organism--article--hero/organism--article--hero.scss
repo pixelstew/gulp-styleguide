@@ -1,0 +1,38 @@
+//Hero with full width image an simple short passage of copy in floating box
+//See > /our_work
+.hero--image {
+  position: relative;
+  //padding: 1em 0;
+  z-index: 1;
+  overflow: hidden;
+  .row {
+    overflow: visible;
+  }
+  img {
+    z-index: -1;
+  }
+  @media (min-width: 900px) {
+    padding: 3em 0;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .row {
+      padding: 0;
+    }
+  }
+}
+.card--full-image {
+  box-shadow: none;
+  padding: 1em 0;
+  @include span(12);
+  @media (min-width: 850px) {
+    padding: 1.5em;
+    @include span(6);
+  }
+  @media (min-width: 1140px) {
+    @include span(4);
+  }
+}

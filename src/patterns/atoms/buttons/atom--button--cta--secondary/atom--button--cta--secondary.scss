@@ -1,0 +1,14 @@
+//Secondary CTA To be used on non critical CTA
+.button--cta--secondary {
+  width: auto;
+  padding: 0.65em 2em;
+  float: none;
+  background: $button-secondary-cta;
+  display: block;
+  box-shadow: bottom-shadow(1), top-shadow(1);
+  color: #fff;
+  -webkit-appearance: none;
+  @include bp(med) {
+    display: inline-block;
+  }
+}

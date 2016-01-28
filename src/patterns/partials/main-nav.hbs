@@ -1,0 +1,79 @@
+<nav>
+  <div class="row">
+    <ul class="styleguide-nav unbulleted">
+      <li class="js-main-nav">
+        <a href="#">Atoms</a>
+        <ul>
+          <li>
+            <a href="#" class="js-sub">Buttons +</a>
+            <ul>
+              {{#each pages}} {{#is data.level "atom"}}{{#is data.element "button"}}
+              <a href="{{relative ../../../page.dest this.dest}}">{{ basename }}</a> {{/is}}{{/is}} {{/each}}
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="js-main-nav">
+        <a href="#">Molecules</a>
+        <ul>
+          <li>
+            <a href="#" class="js-sub">Cards +</a>
+            <ul>
+              {{#each pages}} {{#is data.level "molecule"}}{{#is data.element "card"}}
+              <a href="{{relative ../../../page.dest this.dest}}">{{ basename }}</a> {{/is}}{{/is}} {{/each}}
+            </ul>
+          </li>
+          <li><a href="#" class="js-sub">Blocks +</a>
+            <ul>
+              {{#each pages}} {{#is data.level "molecule"}}{{#is data.element "block"}}
+              <a href="{{relative ../../../page.dest this.dest}}">{{ basename }}</a> {{/is}}{{/is}} {{/each}}
+            </ul>
+          </li>
+          <li><a href="#" class="js-sub">Forms +</a>
+            <ul>
+              {{#each pages}} {{#is data.level "molecule"}}{{#is data.element "form"}}
+              <a href="{{relative ../../../page.dest this.dest}}">{{ basename }}</a> {{/is}}{{/is}} {{/each}}
+            </ul>
+          </li>
+          <li><a href="#" class="js-sub">Navigation +</a>
+            <ul>
+              {{#each pages}} {{#is data.level "molecule"}}{{#is data.element "navigation"}}
+              <a href="{{relative ../../../page.dest this.dest}}">{{ basename }}</a> {{/is}}{{/is}} {{/each}}
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="js-main-nav">
+        <a href="#">Organisms</a>
+        <ul>
+          <li>
+            <a href="#" class="js-sub">Articles +</a>
+            <ul>
+              {{#each pages}} {{#is data.level "organism"}}{{#is data.element "article"}}
+              <a href="{{relative ../../../page.dest this.dest}}">{{ basename }}</a> {{/is}}{{/is}} {{/each}}
+            </ul>
+          </li>
+          <li><a href="#" class="js-sub">Sections +</a>
+            <ul>
+              {{#each pages}} {{#is data.level "organism"}}{{#is data.element "section"}}
+              <a href="{{relative ../../../page.dest this.dest}}">{{ basename }}</a> {{/is}}{{/is}} {{/each}}
+            </ul>
+          </li>
+          <li><a href="#" class="js-sub">Global +</a>
+            <ul>
+              {{#each pages}} {{#is data.level "organism"}}{{#is data.element "global"}}
+              <a href="{{relative ../../../page.dest this.dest}}">{{ basename }}</a> {{/is}}{{/is}} {{/each}}
+            </ul>
+          </li>
+        </ul>
+        <li class="js-main-nav">
+          <a href="#">Templates</a>
+          <ul>
+            <a href="{{ globals.site-url }}templates/template--value.html">Value test</a>
+            <a href="{{ globals.site-url }}templates/template--strategy.html">Strategy test</a>
+            <a href="{{ globals.site-url }}templates/template--strategy--article.html">Article test</a>
+          </ul>
+        </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,33 @@
+<form class="form--donate">
+  <h1>Donate now</h1>
+  <p></p>
+  <ul class="unbulleted">
+    <li class="col--2up">
+      <div class="field-container">
+        <label>
+          <span></span>
+          <span class="form--donate__pound">&pound;</span>
+          <input class="form--donate__input" id="text" pattern="[0-9]*" placeholder="" type="number">
+        </label>
+      </div>
+    </li>
+    <li class="col--2up">
+      <input type="hidden" name="cid" value="153">
+      <input type="hidden" name="free_amount" value="1">
+      <input type="hidden" name="amount" value="">
+      <input type="hidden" name="reserved_appeal_code" value="">
+      <input type="hidden" name="frequency" value="once">
+      <input type="submit" name="submit" value="Donate" class="js-donate-button button button--submit">
+    </li>
+  </ul>
+  <div class="form--donate__radio clearfix">
+    <label class="radio">
+      <input type="radio" name="donate-frequency" class="radio__input" value="once" checked="checked">
+      <span>Single donation</span>
+    </label>
+    <label class="radio">
+      <input type="radio" name="donate-frequency" class="radio__input" value="regular">
+      <span>Monthly donation</span>
+    </label>
+  </div>
+</form>

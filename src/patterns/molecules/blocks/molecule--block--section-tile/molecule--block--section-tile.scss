@@ -1,0 +1,25 @@
+.section-tile {
+  position: relative;
+	box-shadow: bottom-shadow(1), top-shadow(1);
+	overflow: visible;
+	&:hover{
+		box-shadow: bottom-shadow(3), top-shadow(3);
+		z-index: 1;
+		
+	}
+  .section-tile__caption {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+    padding: 1em;
+    p {
+      margin-bottom: 0;
+    }
+		.card--article__caption__tag{
+			bottom: auto;
+			top: -1.5em;
+		}
+  }
+}

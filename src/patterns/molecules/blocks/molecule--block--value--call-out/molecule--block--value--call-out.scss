@@ -1,0 +1,24 @@
+//Block with $primary coloured header > copy > and link
+//See > /our_work
+.block--value-call-out {
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid $primary;
+  padding: 0 0 2.5em 1em;
+  margin-bottom: 2em;
+  h2 {
+    color: $primary;
+  }
+  a {
+    position: absolute;
+    bottom: 0.5em;
+  }
+  @include bp(med) {
+    padding: 0.5em 0 2.5em 1em;
+    margin-top: 3em;
+    margin-bottom: 0;
+  }
+}
+.block--value-call-out__more .button--find-out {
+  padding-left: 0;
+}

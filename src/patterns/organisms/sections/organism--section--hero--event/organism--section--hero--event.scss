@@ -1,0 +1,81 @@
+.hero--event{
+  padding-bottom: 10px;
+  
+  .hero--event__card{
+    display: block;
+    width: 100%;
+    padding: 0;
+    @include bp(med){
+      display: flex;
+      width: 49%;
+      padding: 0 0.5em 0 0 ;
+      order: -1;
+      @media(min-width: 900px){
+        display: flex;
+        width: 33%;
+      }
+    }
+  }
+
+
+
+
+
+  .hero--event__image{
+    position: relative;
+    background-color: $dark-grey;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+    width: 100%;
+    &:before{
+      content: "";
+	    display: block;
+	    padding-top: 50%;
+    }
+    @include bp(med){
+      margin-bottom: 0;
+      position: relative;
+      width: 49%;
+    }
+    @media(min-width: 900px){
+      position: relative;
+      width: 65%;
+    }
+    .content{
+    	position:  absolute;
+    	top: 0;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+      @include bp(med){
+        display: none;
+      }
+    }
+  }
+}
+
+.hero--event__image__logo{
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 4.5em;
+  max-height: 4.5em;
+}
+
+//ie 9 no flex
+
+  .no-flexbox .hero--event{
+    overflow: auto;
+  }
+
+  .no-flexbox .card--event--banner{
+    display: block;
+    float: left;
+  }
+
+  .no-flexbox .hero--event__image{
+    display: block;
+    float: right;
+  }

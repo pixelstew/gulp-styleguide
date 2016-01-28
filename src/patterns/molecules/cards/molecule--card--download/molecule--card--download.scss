@@ -1,0 +1,35 @@
+//Card for downloading files - contains image to the left, title to right and download button
+.card--download {
+  overflow: hidden;
+  position: relative;
+  max-width: 27em;
+  width: 100%;
+  img {
+    margin-bottom: 0;
+  }
+}
+.card--download h2 {
+  margin-bottom: 0.5em;
+}
+.card--download__screen {
+  display: none;
+  border: 3px solid #fff;
+  @media (min-width: 450px) {
+    display: block;
+    float: left;
+    margin-right: 1em;
+    width: 90px;
+    margin-bottom: 0;
+  }
+}
+.card--download__text {
+  position: relative;
+  overflow: auto;
+}
+.card--download .button--download {
+  @media (min-width: 450px) {
+    clear: none;
+    position: relative;
+    bottom: 0;
+  }
+}

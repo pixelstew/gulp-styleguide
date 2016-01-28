@@ -1,0 +1,25 @@
+.nav--breadcrumb {
+  background: none;
+  margin-bottom: 0;
+  ol {
+    padding-left: 0;
+    margin: 0.5em 0;
+  }
+  ol li {
+    display: inline-block;
+    margin-right: 1em;
+    margin-bottom: 0;
+    font-size: 80%;
+    color: $primary;
+    &:after {
+      content: "\f054";
+      font-family: fontAwesome;
+      color: $link;
+      position: relative;
+      right: -10px;
+    }
+    &:last-child:after {
+      content: " ";
+    }
+  }
+}

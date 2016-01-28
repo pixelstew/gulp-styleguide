@@ -1,0 +1,12 @@
+//Only fall back chart styles should be here.
+//Main chart styles are loaded by javascript and they can be found in _chart-settings.scss
+.block--chart{
+	margin-bottom: 4em;
+}
+
+.ct-chart{
+	img{
+		max-width:420px!important;
+    	@include center-block;
+    }
+}

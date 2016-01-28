@@ -1,0 +1,55 @@
+.hero--full-width{
+  position: relative;
+  .row{
+    overflow: visible;
+  }
+  @media (min-width: 900px){
+    padding-top: 3em;
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .row{
+        padding: 0;
+    }
+  }
+  @media (min-width: 1140px){
+    padding-top: 10em;
+  }
+}
+
+.hero--full-width__callout{
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  padding: 1em 0;
+
+  @media (min-width: 600px){
+    padding: 1em;
+  }
+  @media (min-width: 900px){
+    @include span(6);
+    margin-bottom: 3em;
+  }
+  @media (min-width: 1350px){
+    margin-bottom: 7em;
+  }
+  h1{
+    color: $text;
+    margin: 0;
+    margin-bottom: 0.25em;
+  }
+  .hero--full-width__callout__highlight{
+    position: absolute;
+    top: -2em;
+    background: $primary;
+    padding: 10px 20px;
+    p{
+      color: #fff;
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+}

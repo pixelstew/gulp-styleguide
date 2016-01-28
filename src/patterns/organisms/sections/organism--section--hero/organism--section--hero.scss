@@ -1,0 +1,15 @@
+.hero-banner{
+	position: relative;
+}
+
+.hero-banner h2{
+	@include bp(med){		
+		@include span(8);
+		position: absolute;
+		bottom: 1em;
+		left: 1em;
+		margin-bottom: 0;
+		background: $light-grey;
+		color: $text;	
+	}	
+}

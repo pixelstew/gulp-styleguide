@@ -1,0 +1,30 @@
+<div class="top-banner">
+  <!-- <a href="#" class="open-panel">MENU</a> -->
+  <header role="banner">
+    <div class="header row">
+      <div class="header__upper">
+        {{> atom--image--logo }}
+        <div class="header__button--donate">
+          {{> atom--button--donate }}
+        </div>
+      </div>
+      <div class="header__triggers">
+        <div class="header__triggers__search">
+          <a id="js-search" href="#" class="open-panel">
+            <i class="fa fa-search"></i>
+          </a>
+        </div>
+        <div class="header__triggers__menu">
+          <a id="js-menu" href="#" class="open-panel">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </div>
+      <div class="goto-links">
+        <a href="#main-content">Go to main content</a>
+      </div>
+      {{> atom--input--search }}
+    </div>
+  </header>
+  {{> molecule--navigation--main }}
+</div>

@@ -1,0 +1,12 @@
+//Small button - link colour - for use in triggering modals (eg.map)
+
+.button--link--small {
+    background: $link;
+    font-size: 80%;
+    padding: 2px 5px;
+    color: #fff;
+    font-weight: 300;
+    &:hover{
+    	color: #fff;
+    }
+   }

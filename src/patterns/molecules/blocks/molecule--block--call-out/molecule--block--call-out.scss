@@ -1,0 +1,35 @@
+// Block with large stat callout - used on /our_work landing page
+.block--call-out {
+  position: relative;
+  overflow: hidden;
+  background: none;
+  text-align: center;
+  padding: 1em 2em 5em;
+  @include bp(med) {
+    padding: 1.5em 2em 5em;
+  }
+  .block--call-out__stat {
+    text-align: center;
+    font-size: 3em;
+    line-height: 1;
+    font-weight: 300;
+    color: $primary;
+    &:first-line {
+      color: $text;
+    }
+    @media (min-width: 950px) {
+      font-size: 4em;
+    }
+  }
+  p {
+    max-width: 20em;
+    margin: 0 auto;
+  }
+  .button--find-out {
+    position: absolute;
+    bottom: 2em;
+    padding-left: 0;
+    left: 0;
+    width: 100%;
+  }
+}

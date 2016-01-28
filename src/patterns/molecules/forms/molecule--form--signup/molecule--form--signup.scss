@@ -1,0 +1,59 @@
+.form--signup{
+  background: $light-grey;
+  overflow: auto;
+  padding: 1em;
+  position: relative;
+  h2{
+    margin-top: 0;
+    font-weight: 300;
+    }
+  li{
+    margin-bottom: 1em;
+    padding-left: 0;
+    &:before{
+      content: "";
+
+    }
+  }
+  .button, .button--cta, .button--cta--secondary{
+    width: auto;
+    padding: 0.65em 2em;
+    text-transform: uppercase;   
+  }
+}
+
+.form--signup__review{
+  position: relative;
+
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  h3{
+    font-weight: 300;
+    background: $dark-grey;
+
+    padding: 0.5em 0;
+    padding-left: 1em;
+    width: 90%;
+    position: relative;
+    left: -1em;
+
+  }
+  h4{
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+    color: $extra-dark-grey;
+    border-bottom: 1px solid $dark-grey;
+    width: 50%;
+  }
+  .js-form-edit{
+    position: absolute;
+    cursor: pointer;
+    top: 0.5em;
+    right: 1em;
+  }
+}
+
+.form--signup__safeguard{
+  background: #fff;
+  padding: 0.5em;
+}

@@ -1,0 +1,18 @@
+.form--donate--case-study{
+	background: #fff;
+	padding: 1em;
+	//box-shadow: bottom-shadow(2), top-shadow(2);
+	 input{
+	 	margin-bottom: 5px;
+	 		@include bp(x-small){
+					margin-bottom: 0;
+				}
+	 }
+		h1, h3{
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+		ul.unbulleted, .field-container, ul.li{
+			margin-bottom: 0;
+		}
+}

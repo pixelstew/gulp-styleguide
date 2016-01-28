@@ -1,0 +1,15 @@
+//CTA donate colour - for use in donate action only.
+
+.button--donate {
+  @extend .button;
+  width: auto;
+  padding: .65em 1.4em;
+  background: $button-donate;
+  float:left;
+  font-family: $font-stack;
+  box-shadow: bottom-shadow(1), top-shadow(1);
+  color: #fff;
+  &:hover{
+    color: #fff;
+  }
+}

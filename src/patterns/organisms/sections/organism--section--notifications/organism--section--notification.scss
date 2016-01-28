@@ -1,0 +1,64 @@
+.notification-bar {
+  background: $secondary;
+  padding: 0;
+  .row {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+  }
+  p {
+    color: white;
+    margin-bottom: 0;
+  }
+  .notification-bar__title {
+    margin-bottom: 0;
+    //font-size: 0.8em;
+    span {
+      display: inline-block;
+      background: #FFBF3F;
+      padding: 0.6em 0.5em;
+      text-transform: uppercase;
+      color: black;
+      margin-right: 10px;
+      float: left;
+      @media(min-width: 530px) {
+        float: none;
+        padding: 0.3em 0.5em;
+      }
+    }
+  }
+  .notification-bar__message {
+    p {
+      margin-bottom: 0;
+      font-size: 0.8em;
+    }
+  }
+  .notification-bar__dismiss {
+    display: block;
+    float: right;
+  }
+}
+.notification-bar--cookie {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+.notification-bar--beta {
+  .notification-bar__title {
+    margin-bottom: 0;
+    font-size: 0.8em;
+    span {
+      display: inline-block;
+      background: $yell-org;
+      padding: 0.6em 0.5em;
+      text-transform: uppercase;
+      color: $secondary;
+      margin-right: 10px;
+      float: left;
+      @media(min-width: 530px) {
+        float: none;
+        padding: 0.3em 0.5em;
+      }
+    }
+  }
+}

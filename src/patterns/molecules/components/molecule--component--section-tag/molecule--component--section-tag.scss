@@ -1,0 +1,17 @@
+//$primary tag for indication different sections of page
+
+.section-tag{
+  background: $primary;
+  position: absolute;
+  top: -3em;
+  left: auto;
+  padding: 7px 14px;
+  z-index: 1;
+  p{
+    color: #fff;
+    margin-bottom: 0;
+  }
+  @include bp(med){
+    left: 2em;
+  }
+}

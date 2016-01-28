@@ -1,0 +1,17 @@
+<form class="form--donate--case-study">
+  <h1>Donate now</h1>
+  <p>{{ paragraph-short }}</p>
+  <ul class="unbulleted">
+    <li class="col--2up">
+      {{> atom--input--donate }}
+    </li>
+    <li class="col--2up">
+      <input type="hidden" name="cid" value="153">
+      <input type="hidden" name="free_amount" value="1">
+      <input type="hidden" name="amount" value="">
+      <input type="hidden" name="reserved_appeal_code" value="">
+      <input type="hidden" name="frequency" value="once">
+      <input type="submit" name="submit" value="Donate" class="js-donate-button button button--cta--submit">
+    </li>
+  </ul>
+</form>

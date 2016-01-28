@@ -1,0 +1,100 @@
+.hero--event--featured{
+  padding: 0;
+  background: $mid-grey;
+  position: relative;
+  @include bp(med){
+    padding: 1em;
+  }
+  h2{
+    margin-top: 0;
+    @include bp(med){
+      margin-top: 0.5em;
+    }
+  }
+
+  .section-tag{
+    top: -1em;
+    left: 1em;
+  }
+
+  .button--cta--secondary{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+    &:hover{
+      color: #fff;
+    }
+  }
+
+  .hero--event--featured__card{
+    @extend .hero--event__card;
+    padding: 1em 1em 1.5em;
+
+    .card--event--banner ul{
+      padding-bottom: 0;
+    }
+
+    @include bp(med){
+      display: block;
+      width: 49%;
+      padding: 0 0.5em 0 0 ;
+      order: -1;
+    }
+    @media(min-width: 900px){
+      display: block;
+      width: 33%;
+    }
+  }
+
+
+
+
+
+  .hero--event--featured__image{
+    position: relative;
+    //background-color: $dark-grey;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    &:before{
+      content: "";
+	    display: block;
+	    //padding-top: 50%;
+    }
+    @include bp(med){
+      margin-bottom: 0;
+      position: relative;
+      width: 49%;
+    }
+    @media(min-width: 900px){
+      position: relative;
+      width: 65%;
+    }
+    .content{
+      @extend .content;
+
+      @include bp(med){
+        display: none;
+      }
+    }
+  }
+}
+
+
+//ie 9 no flex
+
+  .no-flexbox .hero--event{
+    overflow: auto;
+  }
+
+  .no-flexbox .card--event--banner{
+    display: block;
+    float: left;
+  }
+
+  .no-flexbox .hero--event__image{
+    display: block;
+    float: right;
+  }

@@ -1,0 +1,42 @@
+//Standard accordian for revealing hidden copy/images
+//Uses checkbox hack to avoid javascript https://css-tricks.com/the-checkbox-hack/
+.block--accordian {
+  border-top: 1px solid $dark-grey;
+  box-shadow: bottom-shadow(1), top-shadow(1);
+  background: #fff;
+  section input {
+    display: none;
+  }
+  section label {
+    @extend h3;
+    margin: 0 0 0.1em;
+    display: block;
+    cursor: pointer;
+    padding: 1em 2em 1em 0.8em;
+    color: $link;
+    font-weight: 300;
+    position: relative;
+    i {
+      position: absolute;
+      right: 10px;
+    }
+  }
+  article {
+    height: 0;
+    transition: 0.5s ease-out;
+    overflow: hidden;
+    border-bottom: 1px solid $dark-grey;
+    padding: 0 1em;
+  }
+  section input:checked ~ article {
+    height: auto;
+    //transition: 0.5s ease-out;
+  }
+  section input:checked ~ label {
+    color: $primary;
+  }
+  //Swap downward chevron to upward version when accrodian open
+  section input:checked ~ label i.fa-chevron-down:before {
+    content: "\f077";
+  }
+}

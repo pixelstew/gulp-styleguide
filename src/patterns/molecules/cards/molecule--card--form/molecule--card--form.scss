@@ -1,0 +1,13 @@
+.card--form{
+  padding: 1em;
+  .button{
+    width: 100%;
+  }
+  //IF CTA included is postcode search
+  .form--postcode-search {
+    margin-bottom: 1em;
+  }
+  .form--postcode-search__input{
+    height: 2.6em;
+  }
+}

@@ -1,0 +1,155 @@
+//GLOBAL FOOTER STYLES
+//General footer styles
+footer#main-footer {
+  background: $secondary;
+  .row {
+    position: relative;
+    overflow: visible;
+  }
+}
+.footer__logo {
+  background: $primary;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: -40px;
+    width: 0;
+    transform: rotate(-225deg);
+    border-width: 54px 54px 0;
+    border-style: solid;
+    border-color: $secondary transparent;
+    z-index: 0;
+  }
+  .row {
+    position: relative;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background: $primary;
+    z-index: 1;
+    .footer__accent {
+      position: absolute;
+      top: 0;
+      right: 99.9%;
+      height: 100%;
+    }
+    //Legal and charity numbers
+    p.text-small {
+      color: #fff;
+      margin-bottom: 0;
+      margin-top: 1em;
+      float: left;
+      clear: both;
+      @include bp(med) {
+        clear: none;
+      }
+    }
+    .logo {
+      width: auto;
+      padding: 0.5em 0;
+      a {
+        width: 100px;
+        float: left;
+        svg,
+        image,
+        img {
+          width: 100px;
+          height: 40px;
+          fill: #fff;
+        }
+      }
+      //Small screen size BP
+      @media(min-width: 415px) {
+        a {
+          width: 150px;
+          svg,
+          image,
+          img {
+            width: 150px;
+          }
+        }
+      }
+      //Medium screen size BP
+      @include bp(med) {
+        float: right;
+      }
+    }
+  }
+}
+//Footer logo and social links
+.footer__idents {
+  min-height: 4em;
+  @include bp(med) {
+    @include span(3);
+  }
+  //social links
+  .social-icons {
+    @include span(6);
+    //Medium screen size BP
+    @include bp(med) {
+      @include span(12);
+      margin-top: 1.5em;
+    }
+    //Individual list items containing social icons
+    li {
+      width: 1.5em;
+      color: #fff;
+      font-size: 1.8em;
+      display: inline-block;
+      //Medium screen size BP
+      @include bp(med) {
+        text-align: center;
+      }
+      a {
+        color: #fff;
+        font-weight: 400;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+//Footer navigation - set of 4 x ul
+footer nav {
+  //Medium screen size BP
+  @include bp(med) {
+    @include span(9 last);
+  }
+}
+footer nav ul {
+  font-size: 0.8em;
+  li {
+    color: #fff;
+  }
+  a {
+    color: inherit;
+  }
+  & > li > ul > li {
+    font-size: 1.1em;
+  }
+}
+footer {
+  .footer-nav--primary {
+    @include span(6);
+    &:nth-child(even) {
+      @include span(6 last);
+    }
+    //Small screen size BP
+    @include bp(small) {
+      @include gallery(3);
+      &:nth-child(even) {
+        @include gallery(3);
+      }
+    }
+  }
+  .footer-nav--secondary {
+    @include span(6);
+    //Small screen size BP
+    @include bp(small) {
+      @include gallery(3);
+    }
+  }
+}

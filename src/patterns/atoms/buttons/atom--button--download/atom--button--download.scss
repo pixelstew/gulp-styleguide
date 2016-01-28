@@ -1,0 +1,47 @@
+//Button to be used for file downloads > see molecule--card--download
+.button--download {
+  border: none;
+  color: #fff;
+  padding: 0.65em 1em;
+  font-size: inherit;
+  clear: both;
+  display: block;
+  line-height: 1.2;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 700;
+  -webkit-appearance: none;
+  border-radius: 0 !important;
+  background: $extra-dark-grey;
+  overflow: hidden;
+  box-sizing: border-box;
+  &:hover {
+    color: #fff;
+  }
+}
+//Text on button - generally download now
+.button--download__text {
+  h4 {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+  }
+  //p has class .text-small applied
+  p {
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  @include span(8);
+}
+//Currently inline svg of standard download icon
+.button--download svg {
+  width: 30px;
+  height: 30px;
+  float: right;
+  display: block;
+  padding-top: 10px;
+  fill: #fff;
+  @include bp(med) {
+    width: 30px;
+    display: block;
+  }}

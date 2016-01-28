@@ -1,0 +1,17 @@
+//Button used to reveal hidden text > see molecule--component--read-more
+//Also uses javascipt to enable reveal + animation.
+
+.button--read-more{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: $extra-dark-grey;
+	width: auto!important;
+	padding: 0 10px 3px!important;
+	z-index: 1;
+	cursor: pointer;
+	color: #fff;
+	&:hover{
+		color: #fff;
+	}
+}

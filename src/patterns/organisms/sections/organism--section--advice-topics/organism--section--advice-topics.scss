@@ -1,0 +1,40 @@
+.advice-topics {
+  position: relative;
+  overflow: hidden;
+  clear: both;
+}
+ul.advice-topics__list {
+  display: block;
+  @include bp(small) {
+    float: left;
+    width: 50%;
+  }
+}
+.advice-topics__button {
+  margin-bottom: 1em;
+  @include bp(small) {
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    float: left;
+  }
+}
+.advice-topics .col--2up {
+  clear: both;
+  @media (min-width: 490px) {
+    clear: none;
+    overflow: hidden;
+    position: relative;
+  }
+  h2 {
+    margin-top: 0;
+  }
+}
+.advice-topics__form {
+  @extend .form--signup;
+  border-left: 3px solid $primary;
+  h4 {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,25 @@
+//Hide text behind gradient overlay and reveal after clicking button.
+
+.read-more-container {
+  position: relative;
+  max-height: 200px;
+  overflow: hidden;
+  padding: 1em;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 75px;
+    left: 0;
+    height: 125px;
+    width: 100%;
+    background: linear-gradient(rgba(255,255,255,0),#fff);
+  }
+}
+.read-more-container.js-active {
+  transition: all 1s;
+  max-height: 1300px;
+  height: auto;
+  &:after {
+    background: none;
+  }
+}

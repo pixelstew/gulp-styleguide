@@ -1,0 +1,11 @@
+//This card is used on top of image in full width image hero section
+
+.card--full-image {
+  //Global card style > global.scss
+  @extend .card;
+  //IE 8 fallback
+  background: #fff;
+  //Modern Browsers
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5em 1em;
+}

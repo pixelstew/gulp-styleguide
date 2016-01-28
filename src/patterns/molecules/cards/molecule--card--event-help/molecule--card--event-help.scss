@@ -1,0 +1,15 @@
+.card--event-help {
+  padding: 1em;
+  font-size: 90%;
+  background: $mid-grey;
+  th, td {
+    padding: 0;
+  }
+  td:first-child{
+    padding-right: 15px;
+  }
+}
+.u-background-b .card--event-help,
+.u-background-c .card--event-help {
+  background: #fff;
+}

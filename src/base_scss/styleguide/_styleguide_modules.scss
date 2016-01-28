@@ -1,0 +1,108 @@
+
+//COLOR PALETTES
+
+.palette {
+	float: left;
+	height: 75px;
+	width: 75px;
+	margin: 20px;
+	border: 1px solid $dark-grey;
+}
+
+.palette--primary {
+	@extend .palette;
+	background: $primary;
+}
+.palette--seconday {
+	@extend .palette;
+	background: $secondary;
+}
+.palette--tertiary {
+	@extend .palette;
+	background: $tertiary;
+}
+.palette--alt1 {
+	@extend .palette;
+	background: $turq-blue;
+}
+.palette--alt2 {
+	@extend .palette;
+	background: $aqua-blue;
+}
+.palette--alt3 {
+	@extend .palette;
+	background: $yell-org;
+}
+.palette--alt4 {
+	@extend .palette;
+	background: $hipp-blue;
+}
+.palette--alt5 {@extend .palette;
+	background: $link;
+}
+.palette--alt6 {
+	@extend .palette;
+	background: $breaker-bay;
+}
+.palette--grey1 {
+	@extend .palette;
+	background: $dark-grey;
+}
+
+
+
+//EXAMPLE BOXES
+
+.example {
+	clear:both;
+	padding: 1em 0 3em;
+	//border: 1px solid $dark-grey;
+	//overflow: hidden;
+	margin-bottom: 1em;
+}
+
+.example h3:first-child, .example h1:first-child {
+	margin-top: 0;
+}
+
+//FIELDS
+
+.example input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="reset"]){
+
+}
+
+//CODE VIEW
+
+.code-view{
+	position: relative;
+ margin: 1em 0 3em;
+ clear: both;
+ h3{
+ 	margin: 0;
+ }
+ pre.language-handlebars{
+ 	max-height: 0;
+ 	padding: 0 1em;
+ 	margin: 0;
+ }
+}
+
+.code-view--hbs.js-active, .code-view--html.js-active{
+	 pre.language-handlebars{
+ 	max-height: 1000px;
+ 	padding: 1em;
+ 	margin-top: 1em;
+ }
+}
+
+ .code-view__close{
+ 	  position: absolute;
+    right: 1em;
+    top: 4em;
+    color: #fff;
+    font-size: 1.2em;
+ }
+
+ code-view__closehtml{
+ 	overflow-x: hidden;
+ }

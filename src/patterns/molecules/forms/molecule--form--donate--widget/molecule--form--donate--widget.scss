@@ -1,0 +1,28 @@
+//STand alone donate widget for use in page body
+
+.form--donate--widget{
+	background: #f7f7f7;
+	overflow: auto;
+	padding: 1em;
+	position: relative;
+	border-left: 3px solid #ea232d;
+	  h4{
+	    margin-top: 0;
+	  }
+	 .field-container{
+		@include span(6);
+	 		@include bp(x-small){
+					margin-bottom: 10px;
+				}
+	 }
+	 .button--donate{
+		 @include span(6 last);
+		 padding-left: 0;
+		 padding-right: 0;
+		 clear: none;
+		 margin-bottom: 20px;
+		 @include bp(x-small){
+			margin-bottom: 0;
+		 }
+	 }
+}

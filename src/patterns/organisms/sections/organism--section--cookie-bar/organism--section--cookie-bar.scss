@@ -1,0 +1,19 @@
+.cookiebar {
+  background-color: $secondary;
+  display: none;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  bottom: 0px;
+  p {
+    color: $tertiary;
+    margin-bottom: 0;
+    a {
+      color: $hipp-blue;
+      &.cookiebar__message__close {
+        display: block;
+        float: right;
+      }
+    }
+  }
+}

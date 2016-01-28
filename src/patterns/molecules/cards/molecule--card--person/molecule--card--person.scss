@@ -1,0 +1,33 @@
+//Card with square image and details of person > see our_work/people
+.card--person {
+  position: relative;
+  padding: 0.5em;
+}
+.card--person img {
+  margin-bottom: 0;
+  @include span(4);
+}
+.card--person__caption {
+  @include span(7 last);
+}
+// .people--toplevel{
+// 	@include gallery(6);
+// 	overflow: hidden;
+// }
+//
+// .people--toplevel .card--person{
+// 	@include bp(x-small){
+// 		@include span(11);
+// 	}
+// }
+//
+// .people--toplevel .card--person img{
+// 	margin-bottom: 0;
+// 	@include span(4);
+// }
+//
+// .people--toplevel .card--person__caption{
+// 	@include span(8 last);
+// 	padding: 0.5em;
+// 	padding-bottom: 1.5em;
+// }

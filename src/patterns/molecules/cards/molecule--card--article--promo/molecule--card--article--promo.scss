@@ -1,0 +1,90 @@
+//Article card
+
+.card--article--promo{
+  @extend .card;
+  position: relative;
+
+  img{
+
+    margin-bottom: 0;
+
+  }
+  @include bp(x-small){
+    padding: 0;
+  }
+}
+
+.card--article--promo__caption{
+  position: relative;
+  padding: 0 1em;
+
+  a{
+    font-weight: 500;
+  }
+  @include bp(x-small){
+    @include span(12);
+  	padding: 1em;
+    padding-bottom: 4em;
+    position: relative;
+    h3{
+      margin-top: 0;
+    }
+  }
+}
+
+.card--article--promo__caption__tag{
+  position: absolute;
+  top: -3em;
+  padding: 5px 10px;
+  background: $primary;
+  //box-shadow: bottom-shadow(2), top-shadow(2);
+  p{
+    margin:0;
+    font-size: 90%;
+    color: #fff;
+  }
+
+  @include bp(small){
+    bottom: auto;
+    left: 0;
+    top: -1.5em;
+    padding: 5px 1em;
+  }
+}
+
+.card--article--promo__button {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+  display: block;
+  box-sizing: border-box;
+  z-index: 1;
+
+  .card--article--promo__button__cta{
+    padding: 1em;
+    overflow: hidden;
+    display: flex;
+    a{
+      width: 100%;
+    }
+    //IF CTA included is postcode search
+    .form--postcode-search__input{
+      height: 2.6em;
+    }
+  }
+}
+
+
+.card--article__more{
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 30px;
+  height: 30px;
+  /* border: 1px solid #eee; */
+  background: $extra-dark-grey;
+  padding-left: 9px;
+  padding-top: 2px;
+  color: #fff;
+  border-bottom-right-radius: 3px;
+}

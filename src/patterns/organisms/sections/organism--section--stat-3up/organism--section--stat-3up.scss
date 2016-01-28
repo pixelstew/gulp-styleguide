@@ -1,0 +1,30 @@
+.stat-3up{
+  background: linear-gradient(to right, $dark-grey, $dark-grey 50%, #fff 50%, #fff 100%);
+  z-index: 0;
+}
+
+.stat-3up__row{
+  @include container;
+  padding: 0;
+
+}
+
+.stat-3up .col3up{
+  margin-bottom: 0;
+  @include bp(med){
+    width: 33.3%;
+    width: calc(100%/3);
+  }
+}
+
+.stat-3up .col3up:nth-child(1){
+  background: $dark-grey;
+}
+
+.stat-3up .col3up:nth-child(2){
+  background: $mid-grey;
+}
+
+.stat-3up .col3up:nth-child(3){
+  background: #fff;
+}

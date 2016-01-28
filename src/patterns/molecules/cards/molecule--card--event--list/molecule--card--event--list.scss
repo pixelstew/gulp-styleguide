@@ -1,0 +1,83 @@
+//Event type list cards - Image at full width - lose image at med bp
+
+.card--event--list{
+ position: relative;
+ padding: 1em;
+ margin-bottom: 1em;
+ font-size: 90%;
+ img{
+  margin-bottom: 0;
+  display: none;
+  @include bp(x-small){
+    display: block;
+    width: 15em;
+    float: left;
+
+  }
+ }
+ @include bp(x-small){
+   padding: 0.5em;
+ }
+}
+
+.card--event--list__link{
+	overflow: hidden;
+}
+
+.card--event--list__caption{
+	//padding-bottom: 5.5em;
+  width: 100%;
+  @include bp(x-small){
+    width: calc(100% - 16em);
+    float: right;
+  }
+  hr{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border: 1px solid $mid-grey;
+  }
+
+  ul li{
+    margin-bottom: 0;
+    font-size: 90%;
+  }
+  ul li .fa{
+    text-align: center;
+    color: $extra-dark-grey;
+    width: 15px;
+    margin-right: 10px;
+  }
+  h3{
+    margin-bottom: 0.5em;
+  }
+  p{
+ 	  margin-bottom: 0;
+  }
+  p:first-of-type{
+    color: $dark-grey;
+    margin-bottom: 10px;
+  }
+	p.text-small:first-child{
+		margin-bottom: 0;
+	}
+
+}
+
+
+.card--event--list .card__label{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.card--event--list__button{
+	position: absolute;
+	bottom: 0;
+	width: 90%;
+  padding: 0.5em;
+  padding-left: 0;
+  box-sizing: border-box;
+  @include bp(x-small){
+    width: 45%;
+	}
+}

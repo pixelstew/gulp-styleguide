@@ -1,0 +1,44 @@
+//Event card - used exclusively on the event homepage
+.card--event {
+  position: relative;
+  flex: 1;
+  img {
+    margin-bottom: 0;
+    max-height: 200px;
+  }
+  @include bp(med) {}
+}
+.card--event__caption {
+  padding: 1em 1em 7em;
+  position: relative;
+  h3 {
+    margin-top: 0;
+  }
+  .card--article__caption__tag {
+    top: -1.5em;
+    bottom: auto;
+  }
+}
+.card--event__button,
+.card--event__button--full-event {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  z-index: 1;
+  .card--event__button__cta {
+    padding: 1em;
+    overflow: hidden;
+    a {
+      width: 100%;
+    }
+  }
+  .card--event__button__cta--secondary {
+    clear: both;
+    background: #E5EDFD;
+    padding: 0.5em 1em 0.75em;
+    text-align: center;
+    min-height: 2.8em;
+  }
+}

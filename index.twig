@@ -1,0 +1,26 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="dist/css/main.css">
+</head>
+<body>
+  <div class="row">
+    <div class="content--main">
+      <div class="card card--article push-down">
+        <img src="http://dummyimage.com/1600x900/888" alt="">  <div class="card--article__caption">
+          <div class="card--article__caption__tag">
+            <p>Campaigns</p>
+          </div>
+          <a href="#">Help a recently homeless family register their children with a new school</a>
+        </div>
+        <a class="faux-block-link__overlay" aria-hidden="true" href=""></a></div>
+    </div>
+
+    <h1>{{ title }}</h1>
+
+    {% for value in cta %}
+    <p>{{ value }}</p>
+    {% endfor %}
+
+    <h3>{{ input.tel }}</h3>
+  </div>
+
+</body>

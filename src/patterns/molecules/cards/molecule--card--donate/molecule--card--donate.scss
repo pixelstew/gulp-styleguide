@@ -1,0 +1,14 @@
+//Card with image + donate CTA
+.card--donate {
+  @extend .card;
+  position: relative;
+  .button--donate {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+  }
+}
+.card--donate__caption {
+  padding: 1em 1em 3.5em;
+}

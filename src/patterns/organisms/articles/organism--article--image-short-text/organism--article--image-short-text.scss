@@ -1,0 +1,19 @@
+// .article--image-left__image {
+//   @media(min-width:350px) {
+//     @include span(5 last);
+//     margin-left: 1em;
+//   }
+//   @include bp(x-small) {
+//     @include span(5 last);
+//     clear: none;
+//     overflow: hidden;
+//   }
+// }
+// .article--image-left__text blockquote {
+//   @media(min-width:350px) {
+//     @include span(6);
+//   }
+//   @include bp(med) {
+//     width: 90%;
+//   }
+// }

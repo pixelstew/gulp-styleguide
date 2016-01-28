@@ -1,0 +1,351 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+margin: 0;
+overflow-x: hidden;
+font-size: $base-font-size;
+line-height: $base-line-height;
+*{
+	box-sizing: border-box;
+}
+@include bp(med){
+	font-size: $base-font-size-large;
+	line-height: $base-line-height-large;
+	}
+}
+
+.u-background-a{
+	padding: 2em 0;
+	position: relative;
+	background: $background-a;
+}
+
+.u-background-b{
+	@extend .u-background-a;
+	background: $background-b;
+}
+
+.u-background-c{
+	@extend .u-background-a;
+	background: $background-c;
+}
+
+.u-background-d{
+	@extend .u-background-a;
+	background: $background-d;
+}
+
+.u-background-donate{
+	@extend .u-background-a;
+	background: $donate;
+	padding: 0;
+}
+
+.clearfix, .u-group{
+	clear: both;
+}
+
+.row{
+	@include container;
+  position: relative;
+	padding: 1em;
+	width: 100%;
+	//overflow: hidden;
+}
+
+.row.row--breadcrumb{
+	padding: 0 1em 0;
+}
+
+.js-page-wrapper{
+	overflow: hidden;
+}
+
+.block-container, .push-down, .u-pushdown{
+	margin-bottom: 1em;
+}
+
+.u-background-white{
+	background: #fff;
+}
+
+.u-background-grey{
+	background: $light-grey;
+}
+
+.content--main{
+	padding: 0;
+	@include bp(med){
+		@include span(8);
+		//padding: 0 1em;
+	}
+}
+
+.u-footer-push{
+	padding: 0;
+	@include bp(med){
+		padding: 0 0 4em;
+		//padding: 0 1em;
+	}
+}
+
+.content--main--grid{
+	padding: 0;
+	@include bp(med){
+		@include span(8 last);
+		//padding: 0 1em;
+	}
+}
+
+.content--full{
+	padding: 0;
+	@include bp(med){
+		//padding: 0 1em;
+	}
+}
+
+.content--sidebar{
+	padding: 1em 0 0;
+	//border-top: 8px solid $light-grey;
+	@include bp(med){
+		@include span(3 last);
+		padding: 0;
+		border-top: 0;
+	}
+}
+
+.content--semi{
+	padding: 0;
+	margin-bottom: 2em;
+	@include bp(med){
+		margin-bottom: 0;
+		@include span(6);
+		&:nth-child(even){
+			@include span(5 last);
+		}
+	}
+}
+
+.content--sidebar--grid{
+	padding: 1em 0 0;
+	border-top: 8px solid $light-grey;
+	@include bp(med){
+		@include span(3);
+		padding: 0;
+		border-top: 0;
+	}
+}
+
+blockquote.right{
+@include bp(med){
+		left: 2em;
+		width: 60%;
+		float: right;
+	}
+}
+
+.strategy-top-card{
+	@include bp(x-small){
+		padding: 0.5em;
+	}
+	@include bp(med){
+		padding: 1em;
+	  @include span(3 last);
+
+  }
+}
+
+.promo-container{
+  padding-top: 1em;
+}
+
+.promo-container.flex-container{
+	padding: 0;
+}
+
+.no-flexbox .promo-container.flex-container{
+	overflow: auto;
+}
+
+.u-stat{
+	font-weight: 300;
+}
+
+.red, .u-emphasise, .u-emphasize{
+	color: $primary;
+}
+
+.no-margin{
+	margin-top: 0;
+}
+
+.left{
+	display: block;
+	float: left;
+}
+
+.right{
+ display: block;
+	float: right;
+}
+
+//IMAGES
+
+img{
+	max-width: 100% !important;
+ width: 100%;
+	display: block;
+	border: 0;
+}
+
+img.amplifypixel {
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+}
+
+.content--main img{
+	margin-bottom: 1em;
+}
+
+
+//BASE CARD STYLES
+
+.card {
+ margin: 0;
+ background: #fff;
+ box-shadow: bottom-shadow(1), top-shadow(1);
+ position: relative;
+ font-size: 90%;
+ border-radius: 3px;
+ overflow: hidden;
+ &.hover{
+ 	box-shadow: bottom-shadow(2), top-shadow(2);
+ }
+}
+
+.card--article__caption{
+	padding: 1.5em;
+	padding-bottom: 2.5em;
+ // p{
+ // 	margin-bottom: 0;
+ // }
+}
+
+
+.card.push-down{
+	margin-bottom: 1em;
+}
+
+
+//BASE BLOCK STYLES
+
+.block {
+ margin: 0;
+ padding: 1em;
+
+ 	&.block--shaded{
+ 		background: $light-grey;
+ 	}
+}
+
+//faux-block-link__overlay
+
+.faux-block-link__overlay{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	z-index: 0;
+}
+
+//BASE BUTTON STYLES
+
+.button{
+border: none;
+color: $tertiary;
+padding: .65em 1em;
+font-size: inherit;
+clear: both;
+display: block;
+line-height: 1.2;
+cursor: pointer;
+text-align: center;
+font-weight: 300;
+-webkit-appearance: none;
+border-radius: 0px!important;
+-webkit-border-radius: none;
+ 	&:hover{
+ 		color: #fff;
+ 	}
+}
+
+//REMOVE THIS STYLE ONCE I HAVE SPOKE TO NEIL
+
+.hide{
+	display: none!important;
+}
+
+
+/*! Lazy Load XT v1.0.6 2014-11-19
+ * http://ressio.github.io/lazy-load-xt
+ * (C) 2014 RESS.io
+ * Licensed under MIT */
+
+img {
+    box-shadow: inset 0 0 0 1px #ccc;
+}
+
+.lazy-hidden {
+    opacity: 0.5;
+    background: #eee url('https://england.shelter.org.uk/__data/assets/image/0006/1142178/spinner.gif?v2') no-repeat 50% 50%;
+}
+
+.lazy-loaded {
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+
+//Case study specific styles - hopefull we will be able to delete!
+
+.image-quote{
+	img{
+		border: none;
+		@include bp(med){
+			border-right: 8px solid $primary;
+			width: 50%;
+			float: left;
+		}
+	}
+	blockquote{
+		padding: 1em;
+		&:before{
+			display: none;
+		}
+		@include bp(med){
+			border: none;
+			width: 50%;
+			float: right;
+	 }
+ }
+}
+
+
+//Need to work in better fix for this
+//Remove field has eror spans
+
+.field-has-error{
+  display: none!important;
+}

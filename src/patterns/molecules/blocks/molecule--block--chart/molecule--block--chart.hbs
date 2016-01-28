@@ -1,0 +1,57 @@
+<div class="block block--chart">
+  <h2>What can your money do?</h2>
+  <p>For every &pound;1 you donate, 80p goes towards helping people struggling with bad housing and homelessness</p>
+  <div class="ct-chart ct-major-seventh" id="js-chart-fallback"></div>
+  <script>
+  function contentInit()
+  {
+    //If IE8 or below
+    if (document.all && !window.atob)
+    {
+      var fallBackImg = document.createElement("img");
+      fallBackImg.setAttribute("alt", "Pie chart. 19% spent on fundraising, Governance 1%, Helping people through advice, support and campaigning 80%");
+      fallBackImg.setAttribute("data-srcset", "http://england.shelter.org.uk/__data/assets/image/0006/1164453/expenditure-pie-chart.png");
+      //fallBackImg.setAttribute("src", "http://england.shelter.org.uk/__data/assets/image/0006/1164453/expenditure-pie-chart.png");
+      fallBackImg.setAttribute("class", "chart-fall-back");
+      document.getElementById("js-chart-fallback").appendChild(fallBackImg);
+    }
+    else
+    {
+      loadScript("http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js", "../css/charts.css", setupChart);
+    }
+  }
+  var setupChart = function()
+  {
+    //set up chart data
+    var chartData = {
+      labels: ['spent on fundraising', 'spent on governance', 'spent on helping people through advice, support and campaigning'],
+      series: [19, 1, 80]
+    };
+    //set up chart options
+    var options = {
+      width: '45%',
+      donut: false,
+      showLabel: false,
+      startAngle: 270
+    };
+    var responsiveOptions = [
+      ['screen and (max-width: 640px)',
+      {
+        width: '100%'
+      }]
+    ];
+    new Chartist.Pie('.ct-chart', chartData, options, responsiveOptions);
+    var legend = $('<ul />')
+      .addClass('ct-legend')
+      .html('<li><a href="http://england.shelter.org.uk/strategy_test/focused/money">More about these figures</a></li>');
+    $.each(chartData.labels, function(i, val)
+    {
+      var listItem = $('<li />')
+        .addClass('ct-series-' + i)
+        .html('<strong>' + chartData.series[i] + '% </strong>' + val)
+        .prependTo(legend);
+    });
+    $('.ct-chart').after(legend);
+  };
+  </script>
+</div>

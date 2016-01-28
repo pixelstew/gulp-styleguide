@@ -1,0 +1,93 @@
+//Article card
+.card--article {
+  @extend .card;
+  position: relative;
+  padding: 0.5em;
+  img {
+    @include span(6);
+    margin-bottom: 0;
+    float: left;
+    @include bp(x-small) {
+      width: 15em;
+      margin: 0;
+    }
+  }
+  @include bp(med) {
+    padding: 0;
+    img {
+      @include span(12);
+    }
+  }
+}
+.card--article__caption {
+  @include span(6 last);
+  padding: 0 1em;
+  a {
+    font-weight: 500;
+  }
+  @include bp(x-small) {
+    width: calc(100% - 15em);
+  }
+  @include bp(med) {
+    @include span(12);
+    padding: 1em;
+    position: relative;
+  }
+}
+.card--article__caption__tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+  background: $primary;
+  //box-shadow: bottom-shadow(2), top-shadow(2);
+  p {
+    margin: 0;
+    font-size: 90%;
+    color: #fff;
+  }
+  @include bp(med) {
+    bottom: auto;
+    left: 0;
+    top: -1.5em;
+    padding: 5px 1em;
+  }
+}
+.card--article__more {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 30px;
+  height: 30px;
+  /* border: 1px solid #eee; */
+  background: $button-secondary-cta;
+  padding-left: 9px;
+  padding-top: 2px;
+  color: #fff;
+  border-bottom-right-radius: 3px;
+}
+//alteration for behaviour of 2up versions
+.col2up .card--article {
+  img {
+    @include span(6);
+    margin-bottom: 0;
+    float: left;
+  }
+  @include bp(med) {
+    img {
+      @include span(12);
+    }
+  }
+}
+.col2up .card--article__caption {
+  @include span(6 last);
+  padding: 0 1em;
+  a {
+    font-weight: 500;
+  }
+  @include bp(med) {
+    @include span(12);
+    padding: 1em;
+    position: relative;
+  }
+}

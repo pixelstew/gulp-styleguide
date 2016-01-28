@@ -1,0 +1,12 @@
+.container--pie-chart{
+	@include bp(med){		
+		@include span(8);
+	}
+}
+
+.container--social-proof{
+	@include bp(med){		
+		@include span(4 last);
+	}
+}
+

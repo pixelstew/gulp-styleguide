@@ -1,0 +1,17 @@
+// Latest donation list
+.block--social-proof {
+  background: $dark-grey;
+  h2 {
+    color: #fff;
+    font-weight: 300;
+  }
+}
+ul.unbulleted li.social-proof__li {
+  background: #fff;
+  padding: 1em;
+  font-weight: 700;
+  padding-left: 1em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

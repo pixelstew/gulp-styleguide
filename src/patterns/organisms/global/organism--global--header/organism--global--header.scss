@@ -1,0 +1,208 @@
+//Styles for global header
+//Shadow under header at large size
+.top-banner {
+  overflow: visible;
+  //Medium BP --------------------------------------
+  @include bp(med) {
+    box-shadow: 0 8px 8px -8px #A7A8AA;
+  }
+}
+//reset styles for header row
+.header.row {
+  padding: 0;
+  background: $mid-grey;
+  position: relative;
+  overflow: visible;
+}
+//Header logo
+.header {
+  width: 100%;
+  overflow: hidden;
+  .logo {
+    float: left;
+    background-color: $primary;
+    width: auto;
+    padding: 1em;
+    a {
+      width: 150px;
+      float: left;
+      svg,
+      image,
+      img {
+        width: 150px;
+        height: 40px;
+        fill: #fff;
+      }
+    }
+  }
+}
+//Upper section of header logo and donate button
+.header__upper {
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 8px -8px #A7A8AA;
+  //Medium BP --------------------------------------
+  @include bp(med) {
+    box-shadow: none;
+  }
+}
+//Container div for menu and search buttons
+.header__triggers {
+  position: relative;
+  height: 3em;
+  overflow: hidden;
+  //Medium BP --------------------------------------
+  @include bp(med) {
+    height: 0;
+    position: static;
+  }
+}
+//Search and menu triggers
+.open-panel {
+  color: $primary;
+  font-size: 1.6em;
+  width: 2em;
+  height: 2em;
+  padding: 8px 15px;
+  display: block;
+  i {
+    margin-top: 3px;
+  }
+  &:hover,
+  &.js-active {
+    background: $primary;
+    color: #fff;
+  }
+}
+//Container div for search icon
+.header__triggers__search {
+  overflow: hidden;
+  position: absolute;
+  right: 3.5em;
+  //Medium BP --------------------------------------
+  @include bp(med) {
+    display: none;
+  }
+}
+//Menu button - visible at small breakpoint only
+.header__triggers__menu {
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  //Medium BP --------------------------------------
+  @include bp(med) {
+    .open-panel {
+      display: none;
+    }
+  }
+}
+//Header donate button styles
+.header__button--donate {
+  position: absolute;
+  right: 0.5em;
+  top: 1em;
+}
+//MAIN NAV =====================================================================
+.top-banner > nav {
+  background: $mid-grey;
+}
+.top-banner > nav .row {
+  overflow: visible;
+  //Medium BP
+  @include bp(med) {
+    //overflow: hidden;
+  }
+}
+.top-banner .main-nav {
+  height: 0;
+  padding: 0;
+  min-width: 15em;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  //Medium BP --------------------------------------
+  @include bp(med) {
+    height: auto;
+    position: static;
+  }
+}
+//Active state triggered in js
+.top-banner .main-nav.js-active {
+  height: auto;
+  padding: 2em 2em 0;
+  //Medium BP --------------------------------------
+  @include bp(med) {
+    padding: 0;
+  }
+}
+//SEARCH BAR ===================================================================
+.header.row > .field-container {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  background: $primary;
+  box-shadow: 0 8px 8px -8px #A7A8AA;
+  //Search field
+  & > form input[type="search"] {
+    @include span(9);
+    width: calc(100% - 3.5em);
+    border: none;
+  }
+  //Search submit button
+  .search__submit {
+    width: 2.3em;
+    height: 2.1em;
+    font-size: 1.2rem;
+    background: #fff;
+    border: none;
+    color: $primary;
+    font-family: fontAwesome;
+    border-radius: 0!important;
+    -webkit-appearance: none;
+  }
+  //Medium BP --------------------------------------
+  @include bp(med) {
+    @include span(4);
+    top: 1em;
+    right: 6em;
+    height: inherit;
+    background: none;
+    box-shadow: none;
+    overflow: visible;
+    border: 1px solid $mid-grey;
+    //Search field
+    & > form input[type="search"] {
+      float: left;
+      @include span(9);
+      width: calc(100% - 3.5em);
+    }
+    //Search submit button
+    .search__submit {
+      width: 2.1em;
+      height: 2.15em;
+      font-size: 1.4rem;
+      color: $primary;
+      font-family: fontAwesome;
+      &:hover {
+        background: $primary;
+        color: #fff;
+      }
+    }
+  }
+}
+//Active state triggered in js
+.header.row > .field-container.js-active {
+  height: auto;
+  padding: 10px;
+  z-index: 1;
+  //Medium BP --------------------------------------
+  @include bp(med) {
+    padding: 0;
+  }
+}
+//TEMP REMOVE ONCE MAIN NAV ACTIVE +++++++++++++++++++++++++++++++++++++++++++++
+.home,
+.donate {
+  display: none;
+}

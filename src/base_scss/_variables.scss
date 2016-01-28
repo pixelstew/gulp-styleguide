@@ -1,0 +1,181 @@
+//COLOR ------------------------------
+
+//VISUAL DESIGN SPRINT PALLETTE ================================================
+
+$primary: #ea232d; //reddy pink from brand guidelines
+$secondary: #212122; //Footer black-ish
+
+$donate: #12b9bf; //Teal donate specific
+
+//GREY PALLETTE
+$light-grey: #f7f7f7;
+$mid-grey: #efefef;
+$dark-grey: #e0e0e0;
+$extra-dark-grey: #5A5756;
+$turq-grey: #92a0a6;
+
+//Current link color - will be reviewed
+//$mariner: #3669C9;
+$lochmara: #0978B7;
+
+//GLOBAL COLOR CASES
+$button-donate: $donate;
+$link: $lochmara;
+$text: $secondary;
+$button-cta: $primary;
+//$button-secondary : $turq-blue;
+$button-secondary-cta: $turq-grey;
+$background-a: #fff;
+$background-b: $mid-grey;
+$background-c: $dark-grey;
+$background-d: $secondary;
+
+//OLD VARS FOR COLOR WILL REMOVE ONCE RESTYLE COMPLETE
+//==============================================================================
+
+//CORE PALETTE
+// $primary: #EB212E;
+//$primary: #cc0000; //pure shelter red
+// $secondary: #333;
+$tertiary: #fff;
+$test: #000;
+
+
+//SECONDARY PALLETTE
+
+$turq-blue: #65CFE9;
+$aqua-blue: #72DCD4;
+$yell-org: #FCBF60;
+$hipp-blue: #4FA2B6;
+$casal: #2E5E69;
+$breaker-bay: #58A9A3;
+//new link colour
+$Lochmara: #077ab8;
+$mariner: #3669C9;
+//$mariner: #101093;
+$humming-bird:#C9EFF8; //light blue - currently used on radio labels only
+$beige: #FCF9F6; //Horrible brand beige colour
+
+//GREY PALLETTE
+
+// $dark-grey: #A7A8AA;
+// $mid-grey: #eee;
+// $light-grey: #f8f8f8;
+// $light-grey: #EBEBEB;
+
+
+
+
+
+
+//TEXT -------------------------------
+
+$font-stack: 'helvetica neue', helvetica, arial, sans-serif;
+
+
+//SMALL SCREEN SIZE TEXT VARIABLES
+
+$base-font-size: 1rem!important;
+$base-line-height: 1.375rem;
+
+$base-font-size-large: 1.1875rem!important;
+$base-line-height-large: 1.6875rem;
+
+//MIXIN TO CALCULATE TEXT SIZE AND LINE HEIGHTS (BASED ON GRIDLOVER TOOL)
+
+@mixin text-grid($size, $height, $multiplier, $top){
+font-size: $size;
+    $line: $height;
+    $lines: $multiplier;
+    line-height: $line * $lines;
+    margin-top: $top * $line;
+    margin-bottom: 1 * $line;
+}
+
+
+//MIXIN TO CREATE MATERIAL DESIGN TOP AND BOTTOM DROP SHADOWS AT 6 DEPTH LEVELS
+
+/// Gives a card depth effect.
+/// @param {Number} $depth - depth level (between 1 and 5)
+/// @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+/// @requires {function} top-shadow
+/// @requires {function} bottom-shadow
+@mixin card($depth) {
+  @if $depth < 1 {
+    box-shadow: none;
+  } @else if $depth > 5 {
+    @warn "Invalid $depth `#{$depth}` for mixin `card`.";
+  } @else {
+    box-shadow: bottom-shadow($depth), top-shadow($depth);
+  }
+}
+
+/// Computes a top-shadow for a card effect.
+/// @param {Number} $depth - depth level
+/// @return {List}
+@function top-shadow($depth) {
+  $primary-offset: nth(1.5 2 8 12 15, $depth) * 1px;
+  $blur: nth(1.5 3 10 14 19, $depth) * 4px;
+  $color: rgba(black, nth(.06 .12 .16 .19 .25, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+/// Computes a bottom-shadow for a card effect.
+/// @param {Number} $depth - depth level
+/// @return {List}
+@function bottom-shadow($depth) {
+  $primary-offset: nth(1.5 2 4 8 12, $depth) * 1px;
+  $blur: nth(1 3 3 5 6, $depth) * 4px;
+  $color: rgba(black, nth(.12 .24 .23 .23 .22, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+
+//FLEXBOX MIXINS
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+//MEDIA QUERY BREAKPOINT MIXIN
+//Should be noted we are not limited to these three - use what ever value works for a component.
+
+@mixin bp($point) {
+
+  $bp-x-small: "(min-width: 490px)";
+  $bp-small: "(min-width: 600px)";
+  $bp-med: "(min-width: 768px)";
+
+  @if $point == x-small {
+    @media #{$bp-x-small} { @content; }
+  }
+  @else if $point == small {
+    @media #{$bp-small}  { @content; }
+  }
+  @else if $point == med {
+    @media #{$bp-med}  { @content; }
+  }
+}
+
+
+
+//Quickly center any element within its parent. Requires width or max-width to be set.
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

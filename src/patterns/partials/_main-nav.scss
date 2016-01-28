@@ -1,0 +1,288 @@
+/*
+
+nav{
+	//background: $light-grey;
+	@include bp(med){
+		margin-bottom: 1em;
+	}
+	.row{
+		position: static;
+		overflow: visible;
+		padding: 0;
+		@include bp(med){
+			position: relative;
+		}
+	}
+}
+
+.styleguide-nav{
+	width: 70%;
+	position: absolute;
+	right: -70%;
+	top: 0;
+	height: 100%;
+	background: $secondary;
+	overflow: visible!important;
+	box-shadow: inset 2px 0px 35px -10px #000;
+	@include bp(med){
+		@include span(12);
+		padding: 0.5em 1em;
+		position: static;
+		border: none;
+		right: initial;
+		background: none;
+		margin: 0.5em 0;
+		color: $secondary;
+		box-shadow: none;
+	}
+	a{
+		color: #fff;
+		padding: 1em;
+		font-size: 1.1em;
+		font-weight: 400;
+
+		@include bp(med){
+			padding: 0;
+			color: $text;
+			&:hover{
+			color: $text;
+			}
+	}
+	@media(min-width: 860px){
+			 font-size: 1.2em;
+		}
+		}
+}
+
+
+.styleguide-nav > li {
+	float: none;
+	width: 100%;
+	text-align: left;
+	box-sizing: border-box;
+	margin-bottom: 0!important;
+	padding: 0.5em 0;
+	@include bp(med){
+		margin: 0 10px;
+		position: relative;
+		display: inline-block;
+	 	border: none;
+	 	width: auto;
+	 	padding: 0;
+	}
+}
+
+.styleguide-nav li.current:after{
+	@include bp(med){
+		width: 0;
+  height: 0;
+  position: absolute;
+  content:"";
+  display:block;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-top: 15px solid $light-grey;
+  left: 40%;
+  bottom: -1.75em;
+  margin-left: -8px;
+ }
+}
+
+.styleguide-nav li.donate{
+	@include bp(med){
+	position: absolute;
+	top: 1em;
+	right: 1em;
+		a{
+		 font-weight: 700;
+		 color: $primary;
+		 background-color: #fff;
+	   padding: 4px;
+	   border-radius: 4px;
+	   border: 2px solid $primary;
+		 &:hover{
+			 background-color: $primary;
+			 color: #fff;
+		 }
+		}
+	}
+}
+
+.styleguide-nav > li:first-child{
+	margin-left: 0;
+}
+
+
+.js-main-nav{
+	&:hover{
+			background: #000;
+		}
+	@include bp(med){
+		&:hover{
+			background: $light-grey;
+			a{
+				color: $primary;
+			}
+		}
+	}
+
+}
+
+.js-main-nav > ul{
+	max-height: 0;
+	overflow: hidden;
+	margin: 0;
+	@include bp(med){
+		position: absolute;
+		left: 0;
+		top:1em;
+		width: 5em;
+		max-height: 0;
+		overflow: hidden;
+		background: $secondary;
+		z-index: 1;
+	}
+
+}
+
+.js-main-nav.active{
+	padding-bottom: 0;
+	background: #000;
+	@include bp(med){
+		background: $light-grey;
+		a{
+			color: $primary;
+		}
+
+	}
+
+}
+
+
+.js-main-nav.active > ul{
+	max-height: 1000px;
+  padding: 0;
+  overflow: visible;
+  background: $secondary;
+  margin-top: 0.5em;
+  box-shadow: bottom-shadow(1), top-shadow(1);
+
+  a{
+	 	color: #fff;
+	 	font-weight: 300;
+	 	display: block;
+	 	margin-bottom: 0;
+	 	padding: 0.5em 2em;
+
+	 	@include bp(med){
+	 		font-size: 0.8em;
+	 		padding: 5px 15px;
+	 	}
+	 	a:last-child{
+	 		margin-bottom: 0;
+	 		border-bottom: none;
+	 	}
+	 	&:hover{
+	 		background: #000;
+	 	}
+	 }
+	 @include bp(med){
+	 	max-height: 1000px;
+  	padding: 0;
+  	overflow: visible;
+  	top: 2.4em;
+  	min-width: 10em;
+  	margin-top: 0;
+
+	 }
+
+}
+
+.js-main-nav.active > ul li{
+	margin-bottom: 0;
+
+}
+
+.js-main-nav.active > ul li ul{
+	margin: 0;
+  padding-left: 0;
+	max-height: 0;
+	overflow: hidden;
+	a{
+		padding-left: 1.5em;
+	}
+}
+
+
+.js-main-nav.active > ul li.js-active > ul{
+  max-height: 1000px;
+  overflow: visible;
+
+}
+
+li.js-active > a{
+  	background: #000;
+	}
+
+
+
+
+.secondary-nav{
+	@include bp(med){
+		top: -4em;
+		a{
+			color: #fff;
+			font-size: 0.8em;
+		}
+	}
+}
+
+.secondary-nav.professionals, .secondary-nav.scotland{
+	@include bp(med){
+	position: absolute;
+	}
+}
+
+.secondary-nav.professionals{
+	@include bp(med){
+	right: 5.5em;
+	}
+}
+
+.secondary-nav.scotland{
+	@include bp(med){
+	right: 1em;
+	}
+}
+
+
+
+.openNav .js-page-wrapper {
+    left: 0;
+    -webkit-transform: translate3d(-70%, 0, 0);
+    -moz-transform: translate3d(-70%, 0, 0);
+    -ms-transform: translate3d(-70%, 0, 0);
+    -o-transform: translate3d(-70%, 0, 0);
+    transform: translate3d(-70%, 0, 0);
+    -webkit-transition: -webkit-transform 500ms ease;
+    -moz-transition: -moz-transform 500ms ease;
+    -o-transition: -o-transform 500ms ease;
+    transition: transform 500ms ease-in-out;
+  }
+
+
+.js-page-wrapper {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 500ms ease;
+    -moz-transition: -moz-transform 500ms ease;
+    -o-transition: -o-transform 500ms ease;
+    transition: transform 500ms ease;
+
+}
+
+*/

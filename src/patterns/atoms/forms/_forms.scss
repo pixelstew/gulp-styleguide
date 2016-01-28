@@ -1,0 +1,186 @@
+form {
+  display: block;
+  //	overflow: hidden;
+  li {
+    list-style: none;
+  }
+}
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=search],
+input[type=email],
+input[type=date] {
+  width: 100%;
+  border-radius: 0!important;
+  height: 2.6em;
+  padding-left: 10px;
+  font-size: 1rem;
+  font-family: $font-stack;
+  border: 1px solid $dark-grey;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  @include bp(med) {
+    height: 3em;
+  }
+}
+textarea {
+  width: 100%;
+  border-radius: none!important;
+  height: 7em;
+  padding: 15px 0 0 10px;
+  font-size: 1rem;
+  font-family: $font-stack;
+  margin-top: 0.5em;
+  border: 1px solid $dark-grey;
+}
+input[type=checkbox] {
+  margin-right: 10px;
+}
+.field-container {
+  position: relative;
+  margin-bottom: 1em;
+  clear: both;
+  label {
+    span {
+      font-size: 0.8em;
+    }
+  }
+}
+.field-container--dates {
+  position: relative;
+  margin-bottom: 1em;
+  clear: both;
+  label:first-child {
+    float: left;
+    width: 100%;
+    span {
+      font-size: 0.8em;
+    }
+  }
+}
+.field-container--dates__fields {
+  width: 65px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 1em;
+}
+.submit-container {
+  padding: 1em 0;
+}
+input[type="number"].form--donate__input {
+  padding-left: 30px !important;
+}
+input[type="number"].field--date {
+  width: 65px!important;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+select {
+  width: 100%;
+  margin: 0.5em 0 0;
+  border: 1px solid $dark-grey;
+  background: #fff;
+  padding: 5px 35px 5px 5px;
+  font-size: 0.8em;
+  border: 1px solid $dark-grey;
+  height: 2em;
+}
+.radio {
+  //float: left;
+  position: relative;
+  //background:white;
+  cursor: pointer;
+  font-size: 0.9em;
+  display: block;
+  padding: 0;
+  @include bp(x-small) {
+    float: left;
+    width: 100%;
+    margin-right: 20px;
+    //margin-top: 10px;
+  }
+  span {
+    display: block;
+    //padding: 0.7em 1em 0.7em 2.4em;
+    padding: 0.5em 1em 0.4em 2.1em;
+    //border: 1px solid $dark-grey;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+    @include bp(x-small) {
+      //margin-bottom:0;
+    }
+  }
+  input {
+    position: absolute;
+    top: 22%;
+    left: 0.5em;
+    background: #fff;
+  }
+  input[type="radio"]:checked ~ * {
+    background: $link;
+    color: #fff;
+  }
+}
+.field-container input[type="search"].search-field {
+  -webkit-appearance: textfield;
+  width: calc(100% - 3.2em);
+}
+.search__submit {
+  float: right;
+  width: 1.8em;
+  height: 1.8em;
+  font-size: 1.4em;
+  background: $link;
+  border: none;
+  font-family: $font-stack;
+  cursor: pointer;
+  i {
+    color: #fff;
+  }
+  &:hover {
+    background: #fff;
+    border: 2px solid $link;
+    i {
+      color: $link;
+    }
+  }
+}
+.radio__input {
+  position: relative;
+  top: -2px;
+}
+.form--donate__pound {
+  font-family: $font-stack;
+  font-weight: 700;
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  z-index: 1;
+  font-size: 1.2rem;
+  @include bp(med) {
+    top: 10px;
+  }
+}
+.form--signup {
+  th,
+  td {
+    background: none;
+  }
+}
+li.has-error .field-has-error {
+  display: block!important;
+  color: $primary;
+  font-size: 0.8em;
+  position: absolute;
+  left: 5em;
+  top: -5px;
+  background: #FFE7EC;
+  padding: 5px 10px;
+  border: 1px solid $primary;
+}

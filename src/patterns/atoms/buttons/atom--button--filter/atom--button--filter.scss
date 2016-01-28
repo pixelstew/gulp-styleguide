@@ -1,0 +1,24 @@
+//As primary CTA button but submit variant
+.button--filter {
+  width: 100%;
+  padding: 0.65em 1em;
+  color: $link;
+  border: 2px solid $link;
+  clear: none;
+  width: auto;
+  float: left;
+  margin-right: 0.5em;
+  cursor: pointer;
+  &:hover {
+    background: $link;
+    color: #fff;
+  }
+  @include bp(med) {
+    width: 100%;
+    clear: both;
+    padding: 0.65em 1em;
+  }
+}
+.button--filter.js_target {
+  @extend .button--filter:hover;
+}

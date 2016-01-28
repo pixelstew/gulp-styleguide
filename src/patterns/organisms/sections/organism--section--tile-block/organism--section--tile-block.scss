@@ -1,0 +1,13 @@
+.tile-block{
+  .flex-item{
+    width: 100%;
+    @include bp(small){
+      width: 50%;
+    }
+  }
+  .section-tile__caption{
+    @media(min-width: 950px){
+      @include span(8);
+    }
+  }
+}

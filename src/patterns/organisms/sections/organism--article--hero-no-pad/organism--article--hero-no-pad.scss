@@ -1,0 +1,27 @@
+//Similar to article--hero but with no padding top and bottom.
+//This is primarily to be sued with 50% width graphic svg.
+.hero--image--nopad {
+  position: relative;
+  padding: 0;
+  z-index: 1;
+  overflow: hidden;
+  @include bp(small) {
+    padding: 1em 0;
+  }
+  @media(min-width: 1250px) {
+    padding: 2em 0;
+  }
+  .row {
+    overflow: visible;
+    padding: 0;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .hero--image--nopad__callout {
+    @include span(6);
+  }
+}

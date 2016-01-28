@@ -1,0 +1,36 @@
+header.row{
+	padding: 0.5em 1em 0;
+	overflow: visible;
+}
+
+.top-banner{
+	//background: $primary;
+	position: relative;
+	// a:not(.open-panel){
+	// 	color: $text;
+	// 	font-weight: 700;
+	// 	font-size: 1em;
+	// 	text-decoration: none;
+	// 	&:hover{
+	// 	 	color: $primary;
+	// 	 }
+	// }
+}
+
+.navigate{
+	@include span(4 last);
+}
+
+.goto-links{
+
+	a{
+		position:absolute;
+		left:-9999px;
+
+		&:focus{
+			position:relative;
+			background:$tertiary;
+			left:0px;
+		}
+	}
+}

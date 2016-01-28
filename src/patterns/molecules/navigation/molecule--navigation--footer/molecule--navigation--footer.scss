@@ -1,0 +1,20 @@
+//Footer navigation vertical list
+ul.footer-nav--primary {
+  padding: 1em 0;
+  ul {
+    padding-left: 0;
+  }
+  li {
+    margin-bottom: 0.5em;
+    a {
+      font-weight: 300;
+    }
+  }
+  ul > li > ul {
+    display: none;
+  }
+}
+//Secondary link to follow same style as main nav links
+ul.footer-nav--secondary {
+  @extend .footer-nav--primary;
+}

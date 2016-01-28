@@ -1,0 +1,40 @@
+---
+
+layout: default-layout.hbs
+hbs: 'src/patterns/**/<%= module %>.hbs'
+html: 'src/docs/code-view/**/<%= module %>.html'
+title: <%= element %>--<%= modifier %>
+module: <%= level %>--<%= title %>
+category: <%= level %>s--<%= element %>s
+
+---
+
+<div class="example">
+
+<h1>{{ basename }}</h1>
+
+{{> (lookup . 'module') }}
+
+</div>
+
+
+<div class="code-view">
+<h3>Code view</h3>
+
+<a href="#" class="code-view__reveal js-hbs">handlebars</h3></a> |
+<a href="#" class="code-view__reveal js-html">html</a>
+<a href="#" class="code-view__close">&#10006;</a>
+
+<div class="code-view--hbs">
+{{#markdown}}
+{{{embed hbs }}}
+{{/markdown}}
+</div>
+
+<div class="code-view--html">
+{{#markdown}}
+{{{embed html }}}
+{{/markdown}}
+</div>
+
+</div>
